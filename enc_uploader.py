@@ -74,15 +74,15 @@ class awsEncryptedManager:
         print("2. Download file")
         choice = input("Enter your choice: ")
         if choice == '1':
-            file_name = input("File > ")
-            object_name = input("Object > ")
+            file_name = input("Local file location > ")
+            object_name = input("On which location should stores that file in aws? > ")
             password = input("Password > ")
             if object_name == '':
                 object_name = None
             self.upload_file(file_name, BUCKET, password, object_name)
         elif choice == '2':
-            file_name = input("File > ")
-            object_name = input("Object name (optional)> ")
+            file_name = input("File name to be stored > ")
+            object_name = input("Object location on aws > ")
             password = input("Password > ")
             if object_name == '':
                 object_name = None
